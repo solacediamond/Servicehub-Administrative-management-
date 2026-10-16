@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#07070d">
+<title>Apply to be an admin</title>
+<link rel="icon" type="image/png" href="assets/favicon-64.png">
+<link rel="apple-touch-icon" href="assets/logo-192.png">
+<link rel="stylesheet" href="css/glass.css">
+</head>
+<body>
+<div class="bg" aria-hidden="true"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div></div>
+
+<main class="center">
+  <section class="card wide glass" id="card">
+    <div class="brand"><img class="logo" src="assets/logo-192.png" alt="" width="44" height="44"><div><b>ServiceHub</b><small>Admin</small></div></div>
+
+    <div id="formWrap">
+      <h1>Apply to be an admin</h1>
+      <p class="muted" style="margin-top:8px">Tell us about yourself. The owner reviews every application, and you can sign in only after it is approved.</p>
+      <div class="steps" id="steps"><i></i><i></i><i></i><i></i></div>
+
+      <form id="form" novalidate autocomplete="off">
+
+        <!-- 1 -->
+        <div class="step active" data-step="1">
+          <h2 style="margin-bottom:16px">About you</h2>
+          <div class="grid-fields">
+            <label class="field"><span>First name</span><input class="input" name="firstName" data-label="First name" required><small class="err"></small></label>
+            <label class="field"><span>Middle name</span><input class="input" name="middleName" data-label="Middle name" required><small class="err"></small></label>
+            <label class="field"><span>Last name</span><input class="input" name="lastName" data-label="Last name" required><small class="err"></small></label>
+            <label class="field"><span>Date of birth</span><input class="input" type="date" name="dob" id="dob" required><small class="err"></small><div class="hint" id="ageHint">You must be at least 12 years old.</div></label>
+            <label class="field"><span>Gender</span>
+              <select class="input" name="gender" data-label="Gender" required><option value="">Choose one</option><option>Female</option><option>Male</option></select><small class="err"></small></label>
+            <label class="field"><span>Email</span><input class="input" type="email" name="email" inputmode="email" required><small class="err"></small></label>
+            <label class="field"><span>Phone or WhatsApp</span><input class="input" type="tel" name="phone" inputmode="tel" placeholder="+234…" required><small class="err"></small></label>
+            <label class="field"><span>Country</span><input class="input" name="country" data-label="Country" placeholder="Nigeria" required><small class="err"></small></label>
+            <label class="field full"><span>State and city</span><input class="input" name="location" data-label="State and city" placeholder="Lagos, Ikeja" required><small class="err"></small></label>
+          </div>
+
+          <div class="guardian" id="guardian" hidden>
+            <h3>Parent or guardian</h3>
+            <p class="muted" style="margin-bottom:14px;font-size:14.5px">Applicants under 18 need a parent or guardian who agrees to this application.</p>
+            <div class="grid-fields">
+              <label class="field"><span>Guardian full name</span><input class="input" name="guardianName" data-label="Guardian name"><small class="err"></small></label>
+              <label class="field"><span>Relationship</span><input class="input" name="guardianRelation" data-label="Relationship" placeholder="Mother, father, aunt…"><small class="err"></small></label>
+              <label class="field full"><span>Guardian phone</span><input class="input" type="tel" name="guardianPhone" inputmode="tel"><small class="err"></small></label>
+            </div>
+            <label class="check" id="guardianOkWrap"><input type="checkbox" name="guardianOk"><span>My parent or guardian knows about this application and agrees to it.</span></label>
+          </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="step" data-step="2">
+          <h2 style="margin-bottom:16px">Education and experience</h2>
+          <div class="grid-fields">
+            <label class="field"><span>Highest education level</span>
+              <select class="input" name="education" data-label="Education level" required>
+                <option value="">Choose one</option>
+                <option>Primary school</option><option>Junior secondary (JSS)</option><option>Senior secondary (SSCE, WAEC or NECO)</option>
+                <option>OND, NCE or Diploma</option><option>Bachelor's degree or HND</option><option>Master's degree</option><option>Doctorate</option><option>Other</option>
+              </select><small class="err"></small></label>
+            <label class="field"><span>Currently in school?</span>
+              <select class="input" name="inSchool" required><option value="">Choose one</option><option>Yes</option><option>No</option></select></label>
+            <label class="field full"><span>School or field of study</span><input class="input" name="school" required><small class="err"></small></label>
+            <label class="field"><span>What do you do now?</span><input class="input" name="occupation" data-label="This" placeholder="Student, freelancer, trader…" required><small class="err"></small></label>
+            <label class="field"><span>Languages you speak</span><input class="input" name="languages" data-label="Languages" placeholder="English, Yoruba…" required><small class="err"></small></label>
+            <label class="field full"><span>Relevant skills</span><textarea class="input" name="skills" data-label="Skills" data-min="10" placeholder="Customer support, spreadsheets, writing, checking details…" required></textarea><small class="err"></small></label>
+            <label class="field"><span>Past experience</span>
+              <select class="input" name="experience" data-label="Experience" required>
+                <option value="">Choose one</option><option>None yet</option><option>Customer support</option><option>Community moderation</option><option>Office or admin work</option><option>Sales</option><option>Other</option>
+              </select><small class="err"></small></label>
+            <label class="field"><span>Experience details</span><input class="input" name="experienceDetails" placeholder="Where and for how long" required><small class="err"></small></label>
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="step" data-step="3">
+          <h2 style="margin-bottom:16px">Availability and motivation</h2>
+          <div class="grid-fields">
+            <label class="field"><span>Hours per week</span>
+              <select class="input" name="hours" data-label="Hours per week" required><option value="">Choose one</option><option>Under 5</option><option>5 to 10</option><option>10 to 20</option><option>20 or more</option></select><small class="err"></small></label>
+            <label class="field"><span>Best time of day</span>
+              <select class="input" name="timeOfDay" data-label="Time of day" required><option value="">Choose one</option><option>Morning</option><option>Afternoon</option><option>Evening</option><option>Night</option><option>Flexible</option></select><small class="err"></small></label>
+            <label class="field"><span>Device you will use</span>
+              <select class="input" name="device" data-label="Device" required><option value="">Choose one</option><option>Phone</option><option>Laptop or computer</option><option>Both</option></select><small class="err"></small></label>
+            <label class="field"><span>How did you hear about ServiceHub?</span><input class="input" name="heardFrom" data-label="This" required><small class="err"></small></label>
+            <label class="field full"><span>Why do you want to be an admin?</span><textarea class="input" name="why" data-label="This" data-min="40" placeholder="At least a couple of sentences." required></textarea><small class="err"></small></label>
+            <label class="field full"><span>Who recommended you?</span><input class="input" name="referral" required><small class="err"></small></label>
+          </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="step" data-step="4">
+          <h2 style="margin-bottom:16px">Create your login</h2>
+          <label class="field"><span>Admin name <em>(what you type to sign in)</em></span><input class="input" name="username" id="username" autocomplete="off" autocapitalize="off" spellcheck="false" required><small class="err"></small></label>
+          <div class="grid-fields">
+            <label class="field"><span>Password</span><input class="input" type="password" name="password" id="password" autocomplete="new-password" required><small class="err"></small>
+              <div class="strength"><i id="strength"></i></div><div class="hint">At least 8 characters with a letter and a number.</div></label>
+            <label class="field"><span>Confirm password</span><input class="input" type="password" name="confirm" autocomplete="new-password" required><small class="err"></small></label>
+          </div>
+          <label class="check" id="agree1"><input type="checkbox" name="agree1"><span>I will keep listings, contact details and payment information private, and only use them to do admin work.</span></label>
+          <label class="check" id="agree2"><input type="checkbox" name="agree2"><span>Everything I entered is true.</span></label>
+        </div>
+
+        <p class="form-error" id="formError" role="alert" hidden></p>
+        <div class="wiz-actions">
+          <button type="button" class="btn btn-ghost" id="back">Back</button>
+          <button type="button" class="btn btn-primary" id="next">Continue</button>
+        </div>
+      </form>
+      <div class="under"><a class="linkbtn" href="index.html">Back to sign in</a></div>
+    </div>
+
+    <div id="done" hidden>
+      <h1>Application sent</h1>
+      <p class="muted" style="margin:10px 0 22px">Your application is pending. You can sign in once the owner approves it. Until then, signing in will show that your application is pending.</p>
+      <a class="btn btn-primary btn-block" href="index.html">Back to sign in</a>
+    </div>
+  </section>
+</main>
+
+<script src="js/config.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/mock-data.js"></script>
+<script src="js/api.js"></script>
+<script src="js/apply.js"></script>
+</body>
+</html>
